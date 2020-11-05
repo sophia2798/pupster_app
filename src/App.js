@@ -1,11 +1,10 @@
 import './App.css';
 
 import Navbar from "./components/Navbar/Navbar";
-import About from "./components/discover/About";
-import Discover from "./components/discover/index";
-import Search from "./components/discover/search";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Discover from './components/pages/discover'
+import About from "./components/pages/about/About";
+import Discover from "./components/pages/discover/index";
+// import Search from "./components/search/search";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 function App() {
@@ -13,14 +12,15 @@ function App() {
     <Router>
     <div>
       <Navbar />
-
       <Switch>
-      <Route path="/" component={About} />
-      <Route path="/discover" component={Discover} />
-      <Route path="/search" component={Search} />
-     <Route path="*">
-        <h1>page not found</h1>
-      </Route>
+        <Route exact path="/">
+          <About />
+        </Route>
+        <    Route path="/discover" component={Discover} />
+        {/* <Route path="/search" component={Search} /> */}
+        <Route path="*">
+          <h1>page not found</h1>
+        </Route>
       </Switch>
     </div>
   </Router>
