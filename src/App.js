@@ -1,9 +1,11 @@
 import './App.css';
+
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/discover/About";
 import Discover from "./components/discover/index";
 import Search from "./components/discover/search";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Discover from './components/pages/discover'
 
 
 function App() {
