@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/pages/about/About";
 import Discover from "./components/pages/discover/index";
-// import Search from "./components/search/search";
+import Search from "./components/Search";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
