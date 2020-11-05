@@ -17,6 +17,10 @@ export default class Search extends Component {
                     this.setState({
                         result: res.data.message.splice(0, 10)
                     })
+                } else {
+                    this.setState({
+                        result: res.data.message
+                    })
                 }
             })
             .catch(err => console.log(err));
