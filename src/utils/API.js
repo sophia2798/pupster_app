@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
     getDogBreed: function(breed) {
-        return axios.get(`https://dog.ceo/api/breed${breed}/images`);
+        return axios.get(`https://dog.ceo/api/breed/${breed}/images`);
     },
     getBreedList: function() {
         return axios.get(`https://dog.ceo/api/breeds/list`);
