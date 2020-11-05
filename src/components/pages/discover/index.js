@@ -18,7 +18,11 @@ class Discover extends React.Component {
         .catch(err => console.log(err));
     }
     handleClick = (event) =>{
-      this.setState({click: event.target.className})
+      if(event.target.className === "like"){
+        // const oneInFive = Math.floor(Math.random() * Math.floor(5))
+        // return 
+      }
+      this.setState({click:event.target.classNam })
     }
   
     render() {

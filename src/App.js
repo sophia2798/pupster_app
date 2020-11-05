@@ -1,9 +1,16 @@
 import './App.css';
-import Discover from './components/pages/discover'
+
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Discover />
+  <Router>
+    <div className="App">
+      <Navbar />
+    </div>
+  </Router>
+
   );
 }
 
