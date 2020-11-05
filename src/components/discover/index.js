@@ -1,5 +1,6 @@
 import React from "react";
-import API from "../../utils/API"
+import API from "../../utils/API";
+import App from '.App';
 
 class discover extends Component {
     state = {
