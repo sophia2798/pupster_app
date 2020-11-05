@@ -1,23 +1,39 @@
 import React from "react";
 import API from "../../../utils/API"
 
-class Discover extends Component {
+class Discover extends React.Component {
     state = {
-     
+     dogImg:"",
+     pupfriends:0,
+     click:""
     };
+    
+    componentDidMount() {
+      this.getDog();
+    }
+    
     getDog =() =>{
-        const dog = axios.get("https://dog.ceo/api/breeds/image/random")
-        .then(res => this.setState({ results: res }))
+        const dog = API.getRandomDog()
+        .then(res => this.setState({dogImg:res.data.message}))
         .catch(err => console.log(err));
-      np
+    }
+    handleClick = (event) =>{
+      this.setState({click: event.target.className})
     }
   
     render() {
       return (
-        <h1>Stuff</h1> 
+        <div>
+          <h2>Make New Friends</h2>
+          <h3>Thumbs up on any pups you'd like to meet!</h3>
+          <img src={this.state.dogImg}/>
+          <h4 className="like" onClick={this.handleClick}>like</h4>
+          <h4 className="dislike" onClick={this.handleClick}>dislike</h4>
+          <h2>made friends with {this.state.pupfriends} pups so far</h2>
+        </div> 
       );
     }
   }
   
-  export default discover;
+  export default Discover;
   
